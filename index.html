@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Diagramix</title>
+</head>
+<body>
+
+<header class="main-header">
+    <div class="logo-area">
+      <img src="Logo.png" class="logo-img">
+      <h1 class="page-title" id="page-title">Pagina 1</h1>
+      <img id="toggleIconBox" src="sidebar.png" alt="Toggle Menu">
+      <img id="fullscreenBtn" src="fullscreen.png" alt="Fullscreen">
+    </div>
+  </header>
+
+<div class="icon-box">
+  <img src="figures.png" class="figure-img">
+  <img src="bin.png" class="bin-img">
+  <img id="notesIcon" src="notes.png" class="notes"/>
+  <img id="gridToggleImg" src="grid.png" class="grid-img">
+  <img id="snapToggleImg" src="align.png" class="grid-img">
+  <img src="step-back.png" class="steps-img">
+  <img src="step-forward.png" class="steps-img"> 
+  <img src="layer1.png" class="layers-img"> 
+  <img src="layer2.png" class="layers-img"> 
+  <img id="changeTheme" src="sun.png" alt="Dark/Light mode"/>
+</div>
+
+<div id="notesBox" class="draggable-notes" style="display:none;">
+  <div class="notes-header">
+    <span>Note</span>
+    <button id="closeNotes">×</button>
+  </div>
+  <textarea id="notesText" placeholder="Scrie aici "></textarea>
+  <div class="notes-footer">
+    <button id="saveNotes">Salvează</button>
+    <button id="clearNotes">Șterge</button>
+  </div>
+</div>
+
+  <aside id="grid-box" class="left-box" hidden aria-hidden="true">
+    <div class="left-box-inner">
+      <div class="left-box-content">
+        <h3>Figuri</h3>
+
+        <div class="shapes-list" role="list">
+          <button class="shape-btn" data-shape="terminator" title="(Start/Stop)" type="button" draggable="true">
+            <svg width="48" height="32" viewBox="0 0 48 32">
+              <rect x="2" y="2" width="44" height="28" rx="14" fill="white" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"/>
+            </svg>
+          </button>
+
+          <button class="shape-btn" data-shape="rect" title="Calcul" type="button" draggable="true">
+            <svg width="48" height="32" viewBox="0 0 48 32">
+              <rect x="2" y="2" width="44" height="28" fill="white" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"/>
+            </svg>
+          </button>
+
+          <button class="shape-btn" data-shape="rhombus" title="Decizie" type="button" draggable="true">
+            <svg width="40" height="40" viewBox="0 0 40 40">
+              <polygon points="20,2 38,20 20,38 2,20" fill="white" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"/>
+            </svg>
+          </button>
+
+          <button class="shape-btn" data-shape="document" title="Output" type="button" draggable="true">
+            <svg width="48" height="40" viewBox="0 0 48 40">
+              <path d="M 2 2 L 46 2 L 46 34 Q 36 30, 24 34 Q 12 38, 2 34 Z" fill="white" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"/>
+            </svg>
+          </button>
+
+          <button class="shape-btn" data-shape="hexagon" title="Ciclu cu conditie" type="button" draggable="true">
+            <svg width="48" height="32" viewBox="0 0 48 32">
+              <polygon points="10,2 38,2 46,16 38,30 10,30 2,16" fill="white" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"/>
+            </svg>
+          </button>
+
+          <button class="shape-btn" data-shape="paralelogram" title="Input" type="button" draggable="true">
+            <svg width="48" height="32" viewBox="0 0 48 32">
+              <polygon points="8,2 46,2 40,30 2,30" fill="white" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"/>
+            </svg>
+          </button>
+
+          <button class="shape-btn" data-shape="file" title="Fișier" type="button" draggable="true">
+            <svg width="48" height="32" viewBox="0 0 48 32">
+              <rect x="2" y="2" width="44" height="28" rx="2" fill="white" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"/>
+              <line x1="8" y1="2" x2="8" y2="30" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"/>
+              <line x1="40" y1="2" x2="40" y2="30" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"/>
+            </svg>
+          </button>
+
+          <button class="shape-btn" data-shape="text" title="Text" type="button" draggable="true">
+            <svg width="48" height="32" viewBox="0 0 48 32">
+              <text x="24" y="20" text-anchor="middle" font-size="16" fill="currentColor" font-weight="bold">T</text>
+            </svg>
+          </button>
+
+          <button class="shape-btn" data-shape="arrow" title="Săgeată" type="button" draggable="true">
+            <svg width="48" height="32" viewBox="0 0 48 32">
+              <line x1="4" y1="16" x2="40" y2="16" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"/>
+              <polygon points="40,16 34,12 34,20" fill="currentColor"/>
+            </svg>
+          </button>
+
+          <button class="shape-btn" data-shape="line" title="Linie" type="button" draggable="true">
+            <svg width="48" height="32" viewBox="0 0 48 32">
+              <line x1="4" y1="16" x2="44" y2="16" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"/>
+            </svg>
+          </button>
+        </div>
+
+
+        <div class="border-leftbox">
+          <h3 style="margin-bottom: 12px;">Setări Bloc</h3>
+          
+          <div style="margin-bottom: 12px;">
+            <label class="leftbox-texts">Culoare fundal:</label>
+            <div style="display: flex; gap: 6px; align-items: center;">
+              <input type="color" id="shape-fill-color" value="#ffffff">
+              <label class="transparent-text">
+                <input type="checkbox" id="shape-transparent" style="cursor: pointer;">
+                <span>Transparent</span>
+              </label>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 12px;">
+            <label class="leftbox-texts"">Culoare margine:</label>
+            <input type="color" id="shape-stroke-color" value="#111111">
+          </div>
+
+          <div style="margin-bottom: 12px;">
+            <label class="leftbox-texts"">Grosime margine:</label>
+            <div style="display: flex; align-items: center; gap: 4px;">
+              <input type="number" id="shape-stroke-width" min="1" max="10" value="2">
+            </div>
+          </div>
+        </div>
+
+        <div class="border-leftbox">
+          <h3 style="margin-bottom: 12px;">Setări Text</h3>
+          
+          <div style="margin-bottom: 12px; display: flex; gap: 6px;">
+            <button id="text-bold" class="text-format-btn" title="Bold">B</button>
+            <button id="text-italic" class="text-format-btn" title="Italic">I</button>
+            <button id="text-underline" class="text-format-btn" title="Underline" >U</button>
+          </div>
+
+          <div style="margin-bottom: 12px; display: flex; gap: 6px;">
+            <button id="text-align-left" class="text-align-btn" title="Aliniere stânga"> <img src="align-left.png" class="align-img"> </button>
+            <button id="text-align-center" class="text-align-btn active" title="Aliniere centru" > <img src="align-center.png" class="align-img"> </button>
+            <button id="text-align-right" class="text-align-btn" title="Aliniere dreapta" > <img src="align-right.png" class="align-img"> </button>
+          </div>
+
+          <div style="margin-bottom: 12px;">
+            <label class="leftbox-texts"">Mărime text:</label>
+            <div style="display: flex; align-items: center; gap: 4px;">
+              <input type="number" id="text-size" min="10" max="32" value="14">
+            </div>
+          </div>
+
+          <div style="margin-bottom: 12px;">
+            <label class="leftbox-texts"">Culoare text:</label>
+            <input type="color" id="text-color" value="#111111">
+          </div>
+
+          <div style="margin-bottom: 12px;">
+            <label class="leftbox-texts">Înălțime linie:</label>
+            <input type="number" id="text-line-height" min="1" max="2.5" step="0.1" value="1.4">
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <div id="grid-box-overlay" class="left-overlay" hidden></div>
+
+  <div class="grid-container" id="grid-container">
+    <div id="grid" class="grid"></div>
+    <div id="selection-box" class="selection-box"></div>
+  </div>
+
+  <div class="modal" id="rename-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Redenumește pagina</h3>
+      </div>
+      <div class="modal-body">
+        <label for="new-title">Nume pagină:</label>
+        <input type="text" id="new-title" value="Schemă Bloc">
+      </div>
+      <div class="modal-footer">
+        <button id="cancel-btn">Anulează</button>
+        <button id="save-btn" class="primary">Salvează</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-footer">
+    <button class="add-page-btn" id="add-page-btn" title="Adaugă pagină nouă">+</button>
+    <div id="page-tabs-container" style="display: flex; gap: 8px; flex: 1; overflow-x: auto;"></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
