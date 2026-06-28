@@ -18,4 +18,10 @@ A browser-based flowchart editor. No login, no install, open and draw.
 - **Fullscreen**: hides header, footer, and toolbar
 - **Dark mode**: toggle light/dark theme
 
-##
+## Usage
+
+1. Click a shape in the left panel (or drag it onto the canvas)
+2. Double-click any shape to edit its text
+3. Select a shape to adjust styles in the panel
+4. Click the page title to rename it
+
