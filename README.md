@@ -25,3 +25,16 @@ A browser-based flowchart editor. No login, no install, open and draw.
 3. Select a shape to adjust styles in the panel
 4. Click the page title to rename it
 
+## Shortcuts
+
+| Action | Shortcut |
+|---|---|
+| Undo | `Ctrl+Z` |
+| Redo | `Ctrl+Y` or `Ctrl+Shift+Z` |
+| Copy | `Ctrl+C` |
+| Paste | `Ctrl+V` |
+| Delete | `Delete` or `Backspace` |
+| Pan canvas | `Ctrl+Drag` |
+| Multi-select | `Ctrl+Click` |
+
+## 
