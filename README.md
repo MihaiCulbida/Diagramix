@@ -37,4 +37,6 @@ A browser-based flowchart editor. No login, no install, open and draw.
 | Pan canvas | `Ctrl+Drag` |
 | Multi-select | `Ctrl+Click` |
 
-## 
+## Stack
+
+Builded with HTML, CSS, JavaScript.
